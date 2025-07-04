@@ -1,0 +1,52 @@
+<div class="agregar-pregunta">
+  <mat-card class="pregunta-form-card">
+    <div class="pregunta-form-header">
+      <h2><mat-icon color="primary">help</mat-icon>Agregar Pregunta a: {{ titulo }}</h2>
+    </div>
+
+    <mat-card-content>
+      <form (ngSubmit)="formSubmit()" class="pregunta-form">
+        <mat-form-field appearance="outline" class="pregunta-form-field">
+          <mat-label>Contenido de la pregunta</mat-label>
+          <textarea rows="5" matInput name="contenido" [(ngModel)]="pregunta.contenido"
+            placeholder="Ej. ¿Cuál de los siguientes NO es un tipo de dato en JavaScript?"></textarea>
+        </mat-form-field>
+
+        <div class="pregunta-opciones-grid">
+          <mat-form-field appearance="outline" class="pregunta-form-field">
+            <mat-label>Opción 1</mat-label>
+            <input matInput name="opcion1" [(ngModel)]="pregunta.opcion1" placeholder="Ej. Number" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="pregunta-form-field">
+            <mat-label>Opción 2</mat-label>
+            <input matInput name="opcion2" [(ngModel)]="pregunta.opcion2" placeholder="Ej. Float" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="pregunta-form-field">
+            <mat-label>Opción 3</mat-label>
+            <input matInput name="opcion3" [(ngModel)]="pregunta.opcion3" placeholder="Ej. Boolean" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="pregunta-form-field">
+            <mat-label>Opción 4</mat-label>
+            <input matInput name="opcion4" [(ngModel)]="pregunta.opcion4" placeholder="Ej. String" />
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" class="pregunta-form-field mt20">
+          <mat-label>Respuesta correcta</mat-label>
+          <mat-select name="respuesta" [(ngModel)]="pregunta.respuesta">
+            <mat-option *ngIf="pregunta.opcion1" [value]="pregunta.opcion1">{{ pregunta.opcion1 }}</mat-option>
+            <mat-option *ngIf="pregunta.opcion2" [value]="pregunta.opcion2">{{ pregunta.opcion2 }}</mat-option>
+            <mat-option *ngIf="pregunta.opcion3" [value]="pregunta.opcion3">{{ pregunta.opcion3 }}</mat-option>
+            <mat-option *ngIf="pregunta.opcion4" [value]="pregunta.opcion4">{{ pregunta.opcion4 }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-button class="guardar-btn" type="submit">Guardar Pregunta</button>
+          <button mat-button class="cancelar-btn" type="button"
+            [routerLink]="['/admin/ver-preguntas', examenId, titulo]">Cancelar</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,62 @@
+<head>
+  <title>Regístrate | UTP</title>
+</head>
+
+<div class="register-container">
+  <div class="register-form">
+    <div class="form-content">
+      <img src="../../../assets/utp_plus.png" class="logo-ut-plus" height="45" />
+
+      <h2>¡Bienvenido!</h2>
+      <p>Ingresa tus datos para <strong>registrarte</strong>.</p>
+
+      <form (ngSubmit)="formSubmit()">
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Nombre de Usuario:</mat-label>
+          <input required [(ngModel)]="user.username" name="username" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Contraseña:</mat-label>
+          <input required [(ngModel)]="user.password" name="password" type="password" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Nombre:</mat-label>
+          <input required [(ngModel)]="user.nombre" name="nombre" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Apellido:</mat-label>
+          <input required [(ngModel)]="user.apellido" name="apellido" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Correo Electrónico:</mat-label>
+          <input required [(ngModel)]="user.email" name="email" type="email" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>N° de Celular:</mat-label>
+          <input required [(ngModel)]="user.telefono" name="telefono" matInput>
+        </mat-form-field>
+
+        <a class="forgot-password" href="#">¿No sabe cómo registrarse?</a>
+
+        <button type="submit" mat-raised-button color="primary" class="register-button">Registrarse</button>
+
+        <div class="login-link">
+          <span>¿Ya tiene una cuenta?</span>
+          <button mat-button color="accent" [routerLink]="'/login'">Iniciar Sesión</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="register-welcome">
+    <div class="overlay-text">
+      <h1>Sé parte del futuro<br><span class="highlight">Regístrate en segundos</span></h1>
+      <p>Acceso exclusivo para estudiantes</p>
+    </div>
+  </div>
+</div>

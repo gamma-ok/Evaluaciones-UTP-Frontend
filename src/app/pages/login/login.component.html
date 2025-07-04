@@ -1,0 +1,42 @@
+<head>
+  <title>Iniciar Sesión | UTP</title>
+</head>
+
+<div class="login-container">
+  <div class="login-form">
+    <div class="form-content">
+      <img src="../../../assets/utp_plus.png" class="logo-ut-plus" height="45" />
+
+      <h2>¡Hola!</h2>
+      <p>Ingresa tus datos para <strong>iniciar sesión</strong>.</p>
+
+      <form (ngSubmit)="formSubmit()">
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Usuario:</mat-label>
+          <input [(ngModel)]="loginData.username" name="username" required matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard" class="full-width">
+          <mat-label>Contraseña:</mat-label>
+          <input [(ngModel)]="loginData.password" name="password" required type="password" matInput>
+        </mat-form-field>
+
+        <a class="forgot-password" href="#">¿Olvidó su contraseña?</a>
+
+        <button type="submit" mat-raised-button color="primary" class="login-button">Iniciar Sesión</button>
+
+        <div class="signup-link">
+          <span>¿No tiene una cuenta?</span>
+          <button mat-button color="accent" [routerLink]="'/signup'">Regístrese</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="login-welcome">
+    <div class="overlay-text">
+      <h1>Acceso para estudiantes<br><span class="highlight">Todo lo que necesitas</span></h1>
+      <p>En un solo lugar</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="main-content">
+  <div class="usuario-cuestionario" *ngIf="!esEnviado">
+    <div class="contenido-cuestionario">
+
+      <div class="preguntas-wrapper">
+        <ng-container *ngIf="preguntas">
+          <h2 class="titulo-cuestionario">
+            <mat-icon color="primary">quiz</mat-icon>
+            En curso: <b>{{ preguntas[0].examen.titulo }}</b>
+          </h2>
+        </ng-container>
+
+        <div class="lista-preguntas">
+          <mat-card class="pregunta-card" *ngFor="let p of preguntas; let i = index">
+            <mat-card-content>
+              <p class="pregunta-texto">
+                <b>{{ i + 1 }}) </b> <span [innerHTML]="p.contenido"></span>
+              </p>
+              <mat-divider class="mb10"></mat-divider>
+              <div class="opciones-respuesta">
+                <label class="opcion" *ngFor="let opcion of [p.opcion1, p.opcion2, p.opcion3, p.opcion4]">
+                  <input [(ngModel)]="p.respuestaDada" type="radio" [value]="opcion" [name]="'pregunta_' + i" />
+                  {{ opcion }}
+                </label>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="acciones-envio">
+          <button (click)="enviarCuestionario()" mat-raised-button color="primary">
+            Enviar cuestionario
+          </button>
+        </div>
+      </div>
+
+      <div class="temporizador">
+        <mat-card class="timer-card">
+          <mat-card-header>
+            <mat-card-title>Temporizador</mat-card-title>
+            <mat-card-subtitle>
+              El cuestionario se enviará automáticamente al finalizar el tiempo
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h2 class="tiempo">{{ obtenerHoraFormateada() }}</h2>
+            <mat-spinner mode="determinate" class="spinner" [value]="(timer / (this.preguntas?.length * 2 * 60) * 100)">
+            </mat-spinner>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resultado de la prueba -->
+  <div class="usuario-cuestionario" *ngIf="esEnviado">
+    <div class="contenido-cuestionario">
+      <app-sidebar-user></app-sidebar-user>
+
+      <div class="resultado-container">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Resultado de la prueba</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="text-center">
+            <h2>Puntos conseguidos: {{ puntosConseguidos }}</h2>
+            <h2>Respuestas correctas: {{ respuestasCorrectas }}</h2>
+          </mat-card-content>
+          <mat-card-actions class="acciones-resultado">
+            <button mat-raised-button color="accent" [routerLink]="'/user-dashboard/0'">Inicio</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

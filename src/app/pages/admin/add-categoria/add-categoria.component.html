@@ -1,0 +1,28 @@
+<div class="agregar-categoria">
+  <mat-card class="categoria-form-card">
+    <div class="categoria-form-header">
+      <h2><mat-icon color="primary">add_circle</mat-icon>Nueva Categoría</h2>
+    </div>
+
+    <mat-card-content>
+      <form (ngSubmit)="formSubmit()" class="categoria-form">
+        <mat-form-field appearance="outline" class="categoria-form-field">
+          <mat-label>Título</mat-label>
+          <input required autofocus type="text" name="titulo" matInput placeholder="Ej. Desarrollo Web"
+            [(ngModel)]="categoria.titulo">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="categoria-form-field">
+          <mat-label>Descripción</mat-label>
+          <textarea name="descripcion" matInput placeholder="Describe esta categoría" rows="6"
+            [(ngModel)]="categoria.descripcion"></textarea>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-button class="guardar-btn" type="submit">Guardar Categoría</button>
+          <button mat-button class="cancelar-btn" type="button" [routerLink]="['/admin/categorias']">Cancelar</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

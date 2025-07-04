@@ -1,0 +1,95 @@
+.examenes-container {
+  padding: 30px 50px 30px;
+  background-color: #ecf4f9;
+  min-height: calc(100vh - 84px);
+}
+
+.examenes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.examenes-header h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  gap: 10px;
+  color: #212322;
+}
+
+.btn-agregar {
+  background-color: #3f51b5;
+  color: white;
+  padding: 2px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-agregar:hover {
+  background-color: #303f9f;
+}
+
+.examenes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 36px;
+}
+
+.examen-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.examen-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.examen-datos {
+  margin: 10px 0;
+  color: #555;
+}
+
+.examen-datos p {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-accion {
+  color: #3f51b5;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-eliminar {
+  color: #f44336;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.examen-avatar {
+  background-image: url('../../../../assets/cuestionario-icon.png');
+  background-size: cover;
+  border-radius: 50%;
+}
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-content p {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}

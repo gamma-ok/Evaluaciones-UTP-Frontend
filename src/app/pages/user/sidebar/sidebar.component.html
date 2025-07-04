@@ -1,0 +1,31 @@
+<div class="side-menu">
+  <nav class="nav-links">
+    <a routerLink="/user-dashboard" class="menu-item">
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </a>
+
+    <a routerLink="/user-dashboard/ver-estudiantes" class="menu-item">
+      <mat-icon>people</mat-icon>
+      <span>Lista de Estudiantes</span>
+    </a>
+
+    <a routerLink="/user-dashboard/0" class="menu-item">
+      <mat-icon>quiz</mat-icon>
+      <span>Cuestionarios</span>
+    </a>
+
+    <ng-container *ngFor="let c of categorias">
+      <a [routerLink]="'/user-dashboard/' + c.categoriaId" class="menu-item">
+        <mat-icon>{{ iconosPorCategoria[c.titulo] || 'label' }}</mat-icon>
+        <span>{{ c.titulo }}</span>
+      </a>
+    </ng-container>
+
+
+    <a routerLink="/user-dashboard/profile" class="menu-item">
+      <mat-icon>account_circle</mat-icon>
+      <span>Perfil</span>
+    </a>
+  </nav>
+</div>

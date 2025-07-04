@@ -1,0 +1,47 @@
+<div class="perfil-container">
+  <mat-card class="perfil-card">
+    <div class="perfil-header">
+      <h2><mat-icon color="primary">person</mat-icon>Detalles del Perfil</h2>
+    </div>
+
+    <mat-card-content>
+      <div class="perfil-content">
+        <div class="perfil-foto">
+          <img src="https://cdn-icons-png.flaticon.com/512/9131/9131478.png" alt="Foto de perfil" />
+          <h3>{{ user.nombre }} {{ user.apellido }}</h3>
+        </div>
+
+        <table class="perfil-tabla">
+          <tr>
+            <td>ID</td>
+            <td>{{ user.id }}</td>
+          </tr>
+          <tr>
+            <td>Nombre de usuario</td>
+            <td>{{ user.username }}</td>
+          </tr>
+          <tr>
+            <td>Correo Electrónico</td>
+            <td>{{ user.email }}</td>
+          </tr>
+          <tr>
+            <td>N° Celular</td>
+            <td>{{ user.telefono }}</td>
+          </tr>
+          <tr>
+            <td>Rol</td>
+            <td>{{ getRolNombre(user.authorities[0].authority) }}</td>
+          </tr>
+          <tr>
+            <td>Estado</td>
+            <td>{{ user.enabled ? 'Activo' : 'No activo' }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="perfil-actions">
+        <button mat-button class="editar-btn">Actualizar</button>
+        <button mat-button class="compartir-btn">Compartir</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

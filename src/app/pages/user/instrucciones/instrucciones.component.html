@@ -1,0 +1,60 @@
+<div class="usuario-instrucciones">
+  <mat-card class="instrucciones-card">
+    <div class="instrucciones-header">
+      <mat-icon color="primary">info</mat-icon>
+      <h2>Instrucciones</h2>
+    </div>
+
+    <p class="instrucciones-sub">Por favor, lea cuidadosamente antes de empezar</p>
+
+    <mat-card-content>
+      <div class="detalle-examen">
+        <h3>{{ examen.titulo }}</h3>
+        <p>{{ examen.descripcion }}</p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="bloque-instrucciones">
+        <h4><mat-icon class="icono-seccion">rule</mat-icon> Reglas Generales</h4>
+        <ul>
+          <li>Este cuestionario es solo para fines de práctica.</li>
+          <li>Debes completarlo en <strong>{{ examen.numeroDePreguntas * 2 }} minutos</strong>.</li>
+          <li>Cada pregunta vale <strong>{{ examen.puntosMaximos / examen.numeroDePreguntas }} puntos</strong>.</li>
+          <li>El cuestionario debe completarse antes de la fecha límite: <strong>{{ examen.fechaLimite | date:'dd/MM/yyyy' }}</strong>.</li>
+          <li>Máximo de intentos permitidos: <strong>{{ examen.maxIntentos || 'Ilimitados' }}</strong>.</li>
+        </ul>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="bloque-instrucciones">
+        <h4><mat-icon class="icono-seccion">how_to_reg</mat-icon> Cómo realizar el cuestionario</h4>
+        <ul>
+          <li>Presiona el botón <strong>Comenzar cuestionario</strong> para iniciar.</li>
+          <li>El tiempo comienza al hacer clic en el botón de inicio.</li>
+          <li>Desplázate hacia abajo para avanzar entre preguntas.</li>
+          <li>Presiona <strong>Enviar cuestionario</strong> al finalizar.</li>
+        </ul>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="bloque-instrucciones">
+        <h4><mat-icon class="icono-seccion">tips_and_updates</mat-icon> Consejos para el cuestionario</h4>
+        <ul>
+          <li>Lee cada pregunta cuidadosamente antes de responder.</li>
+          <li>Gestiona bien tu tiempo y no te detengas demasiado en una sola pregunta.</li>
+          <li>Revisa tus respuestas antes de enviar el cuestionario.</li>
+          <li>Evita distracciones para mantener la concentración.</li>
+        </ul>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="acciones">
+      <button (click)="empezarExamen()" mat-raised-button color="primary">
+        Comenzar cuestionario
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

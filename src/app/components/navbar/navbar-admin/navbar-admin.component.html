@@ -1,0 +1,18 @@
+<div class="navbar-container">
+  <nav class="menu-header-nav">
+    <div class="menu-header-content"></div>
+  </nav>
+
+  <mat-toolbar class="navbar-utp">
+    <img src="../../../assets/utp_plus.png" class="logo-img" />
+    <span class="spacer"></span>
+
+    <span *ngIf="isLoggedIn && user" routerLink="/admin/profile" class="user-info">
+      Hola, <strong>{{ user.username }}</strong>
+      <img src="../../../assets/user_img_portal.png" routerLink="/admin/profile" class="user-avatar" />
+      <button mat-button (click)="logout()" class="logout-btn">
+        Cerrar Sesión <mat-icon>logout</mat-icon>
+      </button>
+    </span>
+  </mat-toolbar>
+</div>

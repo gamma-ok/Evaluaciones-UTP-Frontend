@@ -1,0 +1,42 @@
+<div class="usuario-examenes">
+  <h2 class="titulo-examenes">
+    <mat-icon color="primary">quiz</mat-icon>
+    Cuestionarios disponibles
+  </h2>
+
+  <div *ngIf="examenes?.length > 0" class="examenes-grid">
+    <mat-card class="examen-card" *ngFor="let e of examenes">
+      <mat-card-header>
+        <div mat-card-avatar class="examen-avatar"></div>
+        <mat-card-title>{{ e.titulo }}</mat-card-title>
+        <mat-card-subtitle>{{ e.categoria.titulo }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>{{ e.descripcion }}</p>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-actions class="acciones-examen">
+        <button mat-button color="primary" [routerLink]="'/user-dashboard/instrucciones/' + e.examenId">
+          <mat-icon>play_arrow</mat-icon> Empezar
+        </button>
+        <span class="info-item">
+          <mat-icon>help</mat-icon> {{ e.numeroDePreguntas }} preguntas
+        </span>
+        <span class="info-item">
+          <mat-icon>star</mat-icon> {{ e.puntosMaximos }} puntos
+        </span>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div *ngIf="examenes?.length === 0" class="no-examenes">
+    <mat-card>
+      <mat-card-content>
+        <h3>No hay cuestionarios disponibles en esta categoría.</h3>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

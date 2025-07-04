@@ -1,0 +1,30 @@
+<div class="usuarios-container" *ngIf="usuarios.length > 0; else noData">
+    <h2><mat-icon color="primary">people</mat-icon>Lista de Estudiantes</h2>
+
+    <table class="usuarios-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rol</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>
+                    <span *ngFor="let rol of usuario.authorities; let last = last">
+                        {{ getNombreRol(rol.authority) }}<span *ngIf="!last">, </span>
+                    </span>
+                </td>
+                <td>{{ getEstadoTexto(usuario.enabled) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #noData>
+    <p>No hay usuarios para mostrar.</p>
+</ng-template>

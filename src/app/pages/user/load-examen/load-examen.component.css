@@ -1,0 +1,70 @@
+.usuario-examenes {
+  padding: 30px 50px;
+  background-color: #ecf4f9;
+  min-height: calc(100vh - 84px);
+}
+
+.titulo-examenes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #212322;
+}
+
+.examenes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 36px;
+}
+
+.examen-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.examen-avatar {
+  background-image: url('src/assets/cuestionario-user.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.acciones-examen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.acciones-examen button {
+  font-weight: 500;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #555;
+}
+
+.no-examenes {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-content p {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}

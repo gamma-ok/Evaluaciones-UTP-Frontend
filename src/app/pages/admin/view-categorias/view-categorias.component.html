@@ -1,0 +1,30 @@
+<div class="categorias-container">
+  <div class="categorias-header">
+    <h2><mat-icon color="primary">category</mat-icon>Categorías Registradas</h2>
+    <button routerLink="/admin/add-categoria" mat-button class="logout-btn">
+      <mat-icon>add</mat-icon> Agregar Categoría
+    </button>
+  </div>
+
+  <div class="categorias-grid">
+    <mat-card class="categoria-card" *ngFor="let c of categorias">
+      <mat-card-header>
+        <div mat-card-avatar class="categoria-icon">
+          <mat-icon color="accent">category</mat-icon>
+        </div>
+        <mat-card-title>{{ c.titulo }}</mat-card-title>
+        <mat-card-subtitle>{{ c.descripcion }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions align="end">
+        <button mat-button class="btn-accion">
+          <mat-icon>edit</mat-icon> Editar
+        </button>
+        <button mat-button class="btn-eliminar">
+          <mat-icon>delete</mat-icon> Eliminar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="hero-section">
+  <div class="hero-image-container">
+    <img [src]="images[currentImageIndex]" class="hero-image" />
+    
+    <div class="progress-bar-container">
+      <div class="progress-bar" [class.animate]="animateBar"></div>
+    </div>
+  </div>
+</div>
+
+<div class="novedades-section">
+  <div class="novedades-content">
+    <h2 class="titulo">Novedades</h2>
+
+    <div class="novedades-grid">
+      <div class="noticia" *ngFor="let item of noticias">
+        <img [src]="item.imagen" alt="Noticia" class="imagen">
+        <div class="texto-noticia">
+          <a [href]="item.enlace" class="titulo-noticia">
+            {{ item.titulo }}
+          </a>
+          <a [href]="item.enlace" class="leer-nota">
+            Leer nota <span class="arrow">›</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="boton-blog">
+      <button mat-flat-button color="primary">Visita el blog</button>
+    </div>
+  </div>
+</div>
+
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3 text-center">
+        <h1>En desarrollo...</h1>
+      </div>
+    </div>
+  </div>
+</div>

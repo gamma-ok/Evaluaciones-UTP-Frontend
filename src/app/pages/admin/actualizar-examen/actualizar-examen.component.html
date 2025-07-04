@@ -1,0 +1,51 @@
+<div class="actualizar-examen-container">
+  <mat-card class="actualizar-examen-card">
+    <div class="actualizar-examen-header">
+      <h2><mat-icon color="primary">edit</mat-icon> Actualizar Examen</h2>
+    </div>
+
+    <mat-card-content>
+      <form *ngIf="examen" (submit)="actualizarDatos()" class="actualizar-examen-form">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Título</mat-label>
+          <input [(ngModel)]="examen.titulo" type="text" name="titulo" placeholder="Digite el título" required matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Descripción</mat-label>
+          <textarea [(ngModel)]="examen.descripcion" name="descripcion" placeholder="Digite la descripción" rows="6" matInput></textarea>
+        </mat-form-field>
+
+        <div class="form-grid">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Puntos máximos</mat-label>
+            <input [(ngModel)]="examen.puntosMaximos" name="puntosMaximos" placeholder="Cantidad de puntos" matInput>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Número de preguntas</mat-label>
+            <input [(ngModel)]="examen.numeroDePreguntas" name="numeroDePreguntas" placeholder="Nº de preguntas" matInput>
+          </mat-form-field>
+        </div>
+
+        <mat-slide-toggle class="mt20" name="activo" [(ngModel)]="examen.activo" color="primary">
+          Estado de publicación
+        </mat-slide-toggle>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Categorías</mat-label>
+          <mat-select name="categoria" [(ngModel)]="examen.categoria.categoriaId">
+            <mat-option *ngFor="let c of categorias" [value]="c.categoriaId">
+              {{ c.titulo }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-button class="guardar-btn" type="submit">Guardar Cambios</button>
+          <button mat-button class="cancelar-btn" type="button" [routerLink]="['/admin/examenes']">Cancelar</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

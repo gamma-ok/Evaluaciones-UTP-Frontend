@@ -1,0 +1,38 @@
+<div class="navbar-container">
+  <mat-toolbar color="accent" class="topbar">
+    <div class="topbar-content">
+      <div class="topbar-left">
+        <a href="#"><i class="fa-solid fa-up-right-from-square"></i> Noticias</a>
+        <a href="#"><i class="fa-solid fa-share"></i> Conócenos</a>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.facebook.com/gamma2604" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/gamma__ok/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/gamma__ok" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/gamma-ok" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-toolbar class="main-navbar" color="transparent">
+    <div class="navbar-content">
+      <div class="navbar-left">
+        <a routerLink="/">
+          <img src="../../../assets/utp_logo_portal.png" class="logo-img" />
+        </a>
+      </div>
+
+      <div class="navbar-right">
+        <a href="#" class="nav-link">Admisión</a>
+        <span class="separator">︱</span>
+        <a href="#" class="nav-link">Carreras</a>
+        <span class="separator">︱</span>
+        <a href="#" class="nav-link">Empleabilidad</a>
+        <span class="separator">︱</span>
+        <a href="#" class="nav-link">Reglamentos</a>
+
+        <a [routerLink]="'/login'" target="_blank" class="matriculate-btn">Iniciar Sesión</a>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>

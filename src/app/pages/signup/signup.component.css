@@ -1,0 +1,149 @@
+.register-container {
+  display: flex;
+  height: 100vh;
+}
+
+.register-form {
+  flex: 1;
+  background-color: white;
+  color: #161D1F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 45px;
+}
+
+.register-form p {
+  margin-bottom: 24px;
+  color: #161D1F;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.mat-form-field-appearance-standard .mat-form-field-underline {
+  background-color: #555;
+}
+
+.mat-form-field-appearance-standard.mat-focused .mat-form-field-underline {
+  background-color: #9b5de5;
+}
+
+.mat-form-field-appearance-standard .mat-form-field-label {
+  color: #aaa;
+}
+
+.mat-form-field-appearance-standard.mat-focused .mat-form-field-label {
+  color: #9b5de5;
+}
+
+.mat-input-element {
+  color: #161D1F;
+}
+
+.forgot-password {
+  color: #161D1F;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.register-button {
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  text-transform: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #222;
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #161D1F;
+}
+
+.login-link button {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  text-transform: none;
+  padding: 4px 18px;
+  transition: background-color 0.3s ease;
+}
+
+.login-link button:hover {
+  background-color: #222;
+}
+
+.register-welcome {
+  flex: 1;
+  background: url('../../../assets/bg_register.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.register-welcome::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.register-welcome .overlay-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.register-welcome p {
+  font-size: 1rem;
+}
+
+.register-welcome .highlight {
+  font-weight: bold;
+}
+
+.register-welcome .overlay-text p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.register-form mat-form-field.full-width {
+  margin-bottom: 4px;
+}

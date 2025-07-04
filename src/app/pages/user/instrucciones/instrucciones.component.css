@@ -1,0 +1,103 @@
+.usuario-instrucciones {
+  padding: 30px 50px 30px;
+  background-color: #ecf4f9;
+  min-height: calc(100vh - 84px);
+  display: flex;
+  justify-content: center;
+}
+
+.instrucciones-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.instrucciones-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.instrucciones-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #212322;
+}
+
+.instrucciones-sub {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.detalle-examen h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #3f51b5;
+}
+
+.detalle-examen p {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 15px;
+}
+
+.bloque-instrucciones {
+  margin-bottom: 25px;
+}
+
+.bloque-instrucciones h4 {
+  color: #3f51b5;
+  margin-bottom: 8px;
+}
+
+.bloque-instrucciones ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.bloque-instrucciones li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icono-seccion {
+  vertical-align: middle;
+  margin-right: 6px;
+  color: #3f51b5;
+  font-size: 20px;
+}
+
+.bloque-instrucciones h4 {
+  display: flex;
+  align-items: center;
+  color: #3f51b5;
+  margin-bottom: 12px;
+}
+
+.bloque-instrucciones ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #444;
+}
+
+.bloque-instrucciones li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+mat-divider {
+  margin: 20px 0;
+}

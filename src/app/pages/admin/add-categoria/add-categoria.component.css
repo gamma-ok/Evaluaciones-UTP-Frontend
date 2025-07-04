@@ -1,0 +1,74 @@
+.agregar-categoria {
+  padding: 30px 50px 30px;
+  background-color: #ecf4f9;
+  min-height: calc(100vh - 84px);
+}
+
+.categoria-form-card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+
+.categoria-form-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.categoria-form-header h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #212322;
+  gap: 4px;
+}
+
+.categoria-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.categoria-form-field {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.guardar-btn {
+  background-color: #3f51b5;
+  color: white;
+  padding: 2px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.guardar-btn:hover {
+  background-color: #303f9f;
+}
+
+.cancelar-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 2px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cancelar-btn:hover {
+  background-color: #d32f2f;
+}

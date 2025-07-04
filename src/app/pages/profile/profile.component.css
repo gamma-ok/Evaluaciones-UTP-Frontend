@@ -1,0 +1,108 @@
+.perfil-container {
+  background-color: #ecf4f9;
+  min-height: calc(100vh - 84px);
+  padding: 30px 50px 30px;
+}
+
+.perfil-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.perfil-header h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #212322;
+  gap: 4px;
+}
+
+.perfil-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.perfil-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-foto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid gainsboro;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.perfil-foto h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.perfil-tabla {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+}
+
+.perfil-tabla tr td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: #444;
+  font-size: 15px;
+}
+
+.perfil-tabla tr td:first-child {
+  font-weight: bold;
+  color: #222;
+  width: 40%;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.editar-btn {
+  background-color: #3f51b5;
+  color: white;
+  padding: 2px 14x;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.editar-btn:hover {
+  background-color: #303f9f;
+}
+
+.compartir-btn {
+  background-color: #00bcd4;
+  color: white;
+  padding: 2px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.compartir-btn:hover {
+  background-color: #0097a7;
+}

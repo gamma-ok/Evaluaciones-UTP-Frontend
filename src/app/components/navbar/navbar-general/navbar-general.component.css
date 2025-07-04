@@ -1,0 +1,137 @@
+.topbar {
+  height: 40px;
+  font-size: 14px;
+  padding: 0;
+  background-color: #222;
+  color: white;
+}
+
+.topbar-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.topbar a:hover {
+  color: #A0A0A0;
+}
+
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-right i {
+  font-size: 14px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.topbar-left i {
+  margin-right: 2px;
+  font-size: 18px;
+}
+
+.topbar-left a:first-child {
+  margin-right: 20px;
+}
+
+.main-navbar {
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.separator {
+  color: #aaa;
+  margin: 0 0;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #212322;
+  font-weight: 400;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #0047bb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0047bb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.matriculate-btn {
+  background-color: #0047bb;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.matriculate-btn:hover {
+  background-color: #003995;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 84px;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
